@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  myartemis:
+    build: artemis/
+    ports:
+      - 8161:8161
+      # JMX Exporter
+      - 9404:9404
+      # Netty
+      - 9876:9876
+      # Port for CORE,MQTT,AMQP,HORNETQ,STOMP,OPENWIRE
+      - 61616:61616
+      # Port for HORNETQ,STOMP
+      - 5445:5445
+      # Port for AMQP
+      - 5672:5672
+      # Port for MQTT
+      - 1883:1883
+      #Port for STOMP
+      - 61613:61613
